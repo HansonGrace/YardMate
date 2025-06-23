@@ -1,14 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Map from './pages/Map'; 
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* More routes to come */}
+        <Route path="/map" element={<Map />} />
       </Routes>
     </Router>
   );

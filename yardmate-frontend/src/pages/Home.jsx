@@ -1,8 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
-import yardImage from '../assets/park-hero.jpg'; // make sure this exists
+import yardImage from '../assets/park-hero.jpg';
 
 const Home = () => {
+  const navigate = useNavigate(); // 👈 hook to navigate
+
   return (
     <div className="home-page">
       <nav className="navbar">
@@ -12,7 +15,6 @@ const Home = () => {
           <li><a href="/register">Register</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/map">Map</a></li>
         </ul>
       </nav>
 
@@ -21,7 +23,10 @@ const Home = () => {
         <div className="yard-text">
           <h1>Get Out & Play With Your Neighbors!</h1>
           <p>Discover local outdoor games, RSVP in real-time, and meet new friends.</p>
-          <button className="cta-button" onClick={() => alert("Navigating to map...")}>
+          <button
+            className="cta-button"
+            onClick={() => navigate('/map')}
+          >
             Explore the Map
           </button>
         </div>
