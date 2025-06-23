@@ -4,7 +4,7 @@ import './Home.css';
 import yardImage from '../assets/park-hero.jpg';
 
 const Home = () => {
-  const navigate = useNavigate(); // 👈 hook to navigate
+  const navigate = useNavigate(); 
 
   return (
     <div className="home-page">
